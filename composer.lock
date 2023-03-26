@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd4c0c8aedba3e40ac4e7a703c9559eb",
+    "content-hash": "b3d393b769825d535eaf03a3f597bd22",
     "packages": [
         {
             "name": "brick/math",
@@ -5477,16 +5477,16 @@
         },
         {
             "name": "wnikk/laravel-access-ui",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wnikk/laravel-access-ui.git",
-                "reference": "94c60e5596a0c1f9c98f96183dcd25e17d97f484"
+                "reference": "91e78bfd5a9d3758e05a36dbe204e8fc2ef5d4b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wnikk/laravel-access-ui/zipball/94c60e5596a0c1f9c98f96183dcd25e17d97f484",
-                "reference": "94c60e5596a0c1f9c98f96183dcd25e17d97f484",
+                "url": "https://api.github.com/repos/wnikk/laravel-access-ui/zipball/91e78bfd5a9d3758e05a36dbe204e8fc2ef5d4b9",
+                "reference": "91e78bfd5a9d3758e05a36dbe204e8fc2ef5d4b9",
                 "shasum": ""
             },
             "require": {
@@ -5542,9 +5542,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wnikk/laravel-access-ui/issues",
-                "source": "https://github.com/wnikk/laravel-access-ui/tree/v1.2.0"
+                "source": "https://github.com/wnikk/laravel-access-ui/tree/v1.3.0"
             },
-            "time": "2023-03-25T18:17:38+00:00"
+            "time": "2023-03-26T16:55:26+00:00"
         }
     ],
     "packages-dev": [

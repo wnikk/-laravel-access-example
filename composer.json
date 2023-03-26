@@ -11,7 +11,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "wnikk/laravel-access-rules": "^2.0",
-        "wnikk/laravel-access-ui": "^1.2"
+        "wnikk/laravel-access-ui": "^1.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
