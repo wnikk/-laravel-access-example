@@ -4,7 +4,7 @@
         {
             const firstPage = '{{ empty($available['rules'])?'owners':'rules' }}';
 
-            accessUi.init(document.body, firstPage, {
+            accessUi.init(document.getElementById('container-roles'), firstPage, {
                 csrfToken: document.querySelector('meta[name="csrf-token"]')?.content,
                 availableRules: {{ empty($available['rules'])?'false':'true' }},
                 availableOwners: {{ empty($available['owners'])?'false':'true' }},
