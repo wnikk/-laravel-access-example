@@ -90,6 +90,6 @@ trait GuardedController
             '', '.', '.'
         ], static::class);
 
-        return $action?$name.$action:$name;
+        return $name.$action;
     }
 }
