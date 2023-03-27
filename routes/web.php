@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Examples\Example1Controller;
 use App\Http\Controllers\Examples\Example2Controller;
 use App\Http\Controllers\Examples\Example3Controller;
+use App\Http\Controllers\Examples\Example4Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,11 @@ Route::get('/sign-in/{user}', [AuthController::class, 'auth']);
 Route::get('/sign-out', [AuthController::class, 'logout']);
 
 Route::get('/example1', [Example1Controller::class, 'index'])->middleware('can:example1.viewAny');
+
 Route::get('/example2', [Example2Controller::class, 'show']);
+
 Route::any('/example3/{frm}', [Example3Controller::class, 'update']);
+
+Route::apiResource('example4', Example4Controller::class)->parameters([
+    'example4' => 'news'
+]);
