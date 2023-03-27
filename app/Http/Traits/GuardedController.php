@@ -78,7 +78,7 @@ trait GuardedController
      * @param string|null $action
      * @return string
      */
-    protected function getClassNameGate(?string $action = null): string
+    protected static function getClassNameGate(?string $action = null): string
     {
         // Replace name for class App\Http\Controllers\Examples\Example1Controller
         // to guard prefix "Examples.Example1."
