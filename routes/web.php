@@ -6,6 +6,8 @@ use App\Http\Controllers\Examples\Example1Controller;
 use App\Http\Controllers\Examples\Example2Controller;
 use App\Http\Controllers\Examples\Example3Controller;
 use App\Http\Controllers\Examples\Example4Controller;
+use App\Http\Controllers\Examples\Example5Controller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +35,8 @@ Route::any('/example3/{frm}', [Example3Controller::class, 'update']);
 
 Route::apiResource('example4', Example4Controller::class)->parameters([
     'example4' => 'news'
+]);
+
+Route::apiResource('example5', Example5Controller::class)->parameters([
+    'example5' => 'news'
 ]);

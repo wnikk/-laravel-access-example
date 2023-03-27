@@ -34,11 +34,11 @@ class CreateRulesSeeder extends Seeder
         AccessRules::newRule('delete', 'Global rule "delete" for example4');
 
         // example #5 - resource for controller
-        AccessRules::newRule('Example5News.viewAny', 'Rule for one Controller his action "viewAny" example5');
-        AccessRules::newRule('Example5News.view', 'Rule for one Controller his action "view" example5');
-        AccessRules::newRule('Example5News.create', 'Rule for one Controller his action "create" example5');
-        AccessRules::newRule('Example5News.update', 'Rule for one Controller his action "update" example5');
-        AccessRules::newRule('Example5News.delete', 'Rule for one Controller his action "delete" example5');
+        AccessRules::newRule('Examples.Example5.viewAny', 'Rule for one Controller his action "viewAny" example5');
+        AccessRules::newRule('Examples.Example5.view', 'Rule for one Controller his action "view" example5');
+        AccessRules::newRule('Examples.Example5.create', 'Rule for one Controller his action "create" example5');
+        AccessRules::newRule('Examples.Example5.update', 'Rule for one Controller his action "update" example5');
+        AccessRules::newRule('Examples.Example5.delete', 'Rule for one Controller his action "delete" example5');
 
         // example #6 - magic self
         AccessRules::newRule(
