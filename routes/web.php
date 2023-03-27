@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Examples\Example1Controller;
+use App\Http\Controllers\Examples\Example2Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::get('/sign-in/{user}', [AuthController::class, 'auth']);
 Route::get('/sign-out', [AuthController::class, 'logout']);
 
 Route::get('/example1', [Example1Controller::class, 'index'])->middleware('can:example1.viewAny');
+Route::get('/example2', [Example2Controller::class, 'show']);
