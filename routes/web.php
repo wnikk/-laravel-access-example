@@ -20,6 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/sign-in/{user}', [AuthController::class, 'auth']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/sign-out', [AuthController::class, 'logout']);
 
 Route::get('/example1', [Example1Controller::class, 'index'])->middleware('can:example1.viewAny');
