@@ -5409,16 +5409,16 @@
         },
         {
             "name": "wnikk/laravel-access-rules",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wnikk/laravel-access-rules.git",
-                "reference": "50e79d4a7cabf7068221c297a48c0c3f8dd78c7b"
+                "reference": "c39aca7f29b8a35c924a79e23d9269ef2ce8a4bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wnikk/laravel-access-rules/zipball/50e79d4a7cabf7068221c297a48c0c3f8dd78c7b",
-                "reference": "50e79d4a7cabf7068221c297a48c0c3f8dd78c7b",
+                "url": "https://api.github.com/repos/wnikk/laravel-access-rules/zipball/c39aca7f29b8a35c924a79e23d9269ef2ce8a4bc",
+                "reference": "c39aca7f29b8a35c924a79e23d9269ef2ce8a4bc",
                 "shasum": ""
             },
             "require": {
@@ -5459,6 +5459,7 @@
             "homepage": "https://github.com/wnikk/laravel-access-rules",
             "keywords": [
                 "acl",
+                "acr",
                 "laravel",
                 "manager",
                 "permission",
@@ -5471,9 +5472,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wnikk/laravel-access-rules/issues",
-                "source": "https://github.com/wnikk/laravel-access-rules/tree/v2.0.1"
+                "source": "https://github.com/wnikk/laravel-access-rules/tree/v2.0.2"
             },
-            "time": "2023-03-16T09:30:33+00:00"
+            "time": "2023-03-27T18:15:12+00:00"
         },
         {
             "name": "wnikk/laravel-access-ui",
@@ -6527,16 +6528,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.0.18",
+            "version": "10.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "582563ed2edc62d1455cdbe00ea49fe09428eef3"
+                "reference": "20c23e85c86e5c06d63538ba464e8054f4744e62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/582563ed2edc62d1455cdbe00ea49fe09428eef3",
-                "reference": "582563ed2edc62d1455cdbe00ea49fe09428eef3",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/20c23e85c86e5c06d63538ba464e8054f4744e62",
+                "reference": "20c23e85c86e5c06d63538ba464e8054f4744e62",
                 "shasum": ""
             },
             "require": {
@@ -6608,7 +6609,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.18"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.19"
             },
             "funding": [
                 {
@@ -6624,7 +6625,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-22T06:15:31+00:00"
+            "time": "2023-03-27T11:46:33+00:00"
         },
         {
             "name": "sebastian/cli-parser",
