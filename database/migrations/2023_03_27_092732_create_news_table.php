@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name', 70);
             $table->string('description', 320)->nullable();
             $table->text('body');
+            $table->softDeletes();
         });
     }
 
