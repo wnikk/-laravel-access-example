@@ -23,7 +23,7 @@ class Example4Controller extends Controller
      */
     public function index()
     {
-        Response::json(News::all());
+        return Response::json(News::all());
     }
 
     /**
