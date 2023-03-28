@@ -22,5 +22,3 @@ Make the maintainer happy by hitting the star icon for this repository!
 ### Ready to be a sponsor? :coffee:
 
 You can now [buy me a latte](https://www.buymeacoffee.com/wnik) =)
-
-
