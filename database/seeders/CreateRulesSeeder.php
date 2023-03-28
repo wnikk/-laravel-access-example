@@ -52,10 +52,10 @@ class CreateRulesSeeder extends Seeder
         AccessRules::newRule('Example7News.test', 'Rule event "test" example7');
 
         // Final example, add control to the Access user interface
-        $id = AccessRules::newRule('UserRules.index', 'View all rules, permits and inheritance');
-        AccessRules::newRule('UserRules.rules', 'Working with Rules', null, $id, 'required|in:index,store,update,destroy');
-        AccessRules::newRule('UserRules.roles', 'Working with Roles', null, $id, 'required|in:index,store,update,destroy');
-        AccessRules::newRule('UserRules.inherit', 'Working with Inherit', null, $id, 'required|in:index,store,destroy');
-        AccessRules::newRule('UserRules.permission', 'Working with Permission', null, $id, 'required|in:index,update');
+        $id = AccessRules::newRule('Examples.UserRules.main', 'View all rules, permits and inheritance');
+        AccessRules::newRule('Examples.UserRules.rules', 'Working with Rules', null, $id, 'nullable|in:index,store,update,destroy');
+        AccessRules::newRule('Examples.UserRules.roles', 'Working with Roles', null, $id, 'nullable|in:index,store,update,destroy');
+        AccessRules::newRule('Examples.UserRules.inherit', 'Working with Inherit', null, $id, 'nullable|in:index,store,destroy');
+        AccessRules::newRule('Examples.UserRules.permission', 'Working with Permission', null, $id, 'nullable|in:index,update');
     }
 }

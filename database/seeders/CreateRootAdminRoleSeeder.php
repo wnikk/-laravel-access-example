@@ -35,36 +35,37 @@ class CreateRootAdminRoleSeeder extends Seeder
         $acr->addPermission('delete');
 
         // For example #5
-        $acr->addPermission('Example5News.viewAny');
-        $acr->addPermission('Example5News.view');
-        $acr->addPermission('Example5News.create');
-        $acr->addPermission('Example5News.update');
-        $acr->addPermission('Example5News.delete');
+        $acr->addPermission('Examples.Example5.viewAny');
+        $acr->addPermission('Examples.Example5.view');
+        $acr->addPermission('Examples.Example5.create');
+        $acr->addPermission('Examples.Example5.update');
+        $acr->addPermission('Examples.Example5.delete');
 
         // For example #6
         //For all - $acr->addPermission('example6.update');
         $acr->addPermission('example6.update.self');
 
         // For example #7
-        $acr->addPermission('Example7News.create');
-        $acr->addPermission('Example7News.update');
-        $acr->addPermission('Example7News.delete');
-        $acr->addPermission('Example7News.forceDelete');
+        $acr->addPermission('Example7News.test');
 
         // For final example
-        $acr->addPermission('UserRules.index');
-        $acr->addPermission('UserRules.rules', 'index');
-        $acr->addPermission('UserRules.rules', 'store');
-        $acr->addPermission('UserRules.rules', 'update');
-        $acr->addPermission('UserRules.rules', 'destroy');
-        $acr->addPermission('UserRules.roles', 'index');
-        $acr->addPermission('UserRules.roles', 'store');
-        $acr->addPermission('UserRules.roles', 'update');
-        $acr->addPermission('UserRules.roles', 'destroy');
-        $acr->addPermission('UserRules.inherit', 'index');
-        $acr->addPermission('UserRules.inherit', 'store');
-        $acr->addPermission('UserRules.inherit', 'destroy');
-        $acr->addPermission('UserRules.permission', 'index');
-        $acr->addPermission('UserRules.permission', 'update');
+        $acr->addPermission('Examples.UserRules.index');
+        $acr->addPermission('Examples.UserRules.rules');
+        $acr->addPermission('Examples.UserRules.rules', 'index');
+        $acr->addPermission('Examples.UserRules.rules', 'store');
+        $acr->addPermission('Examples.UserRules.rules', 'update');
+        $acr->addPermission('Examples.UserRules.rules', 'destroy');
+        $acr->addPermission('Examples.UserRules.roles');
+        $acr->addPermission('Examples.UserRules.roles', 'index');
+        $acr->addPermission('Examples.UserRules.roles', 'store');
+        $acr->addPermission('Examples.UserRules.roles', 'update');
+        $acr->addPermission('Examples.UserRules.roles', 'destroy');
+        $acr->addPermission('Examples.UserRules.inherit');
+        $acr->addPermission('Examples.UserRules.inherit', 'index');
+        $acr->addPermission('Examples.UserRules.inherit', 'store');
+        $acr->addPermission('Examples.UserRules.inherit', 'destroy');
+        $acr->addPermission('Examples.UserRules.permission');
+        $acr->addPermission('Examples.UserRules.permission', 'index');
+        $acr->addPermission('Examples.UserRules.permission', 'update');
     }
 }
