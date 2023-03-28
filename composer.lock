@@ -5409,16 +5409,16 @@
         },
         {
             "name": "wnikk/laravel-access-rules",
-            "version": "2.0.3",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wnikk/laravel-access-rules.git",
-                "reference": "ae3eac51f97030d32bfae420acd0daf926c08969"
+                "reference": "b55f87a8b02cfd7c5b9ef6f46321ec272cc1c4ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wnikk/laravel-access-rules/zipball/ae3eac51f97030d32bfae420acd0daf926c08969",
-                "reference": "ae3eac51f97030d32bfae420acd0daf926c08969",
+                "url": "https://api.github.com/repos/wnikk/laravel-access-rules/zipball/b55f87a8b02cfd7c5b9ef6f46321ec272cc1c4ee",
+                "reference": "b55f87a8b02cfd7c5b9ef6f46321ec272cc1c4ee",
                 "shasum": ""
             },
             "require": {
@@ -5472,9 +5472,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wnikk/laravel-access-rules/issues",
-                "source": "https://github.com/wnikk/laravel-access-rules/tree/v2.0.3"
+                "source": "https://github.com/wnikk/laravel-access-rules/tree/v2.0.8"
             },
-            "time": "2023-03-27T21:00:48+00:00"
+            "time": "2023-03-28T00:13:05+00:00"
         },
         {
             "name": "wnikk/laravel-access-ui",
