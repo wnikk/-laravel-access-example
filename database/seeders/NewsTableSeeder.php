@@ -22,7 +22,7 @@ class NewsTableSeeder extends Seeder
         News::create([
             'user_id' => 1,
             'name' => 'Second news',
-            'description' => 'Description of second news',
+            'description' => 'Description of second test news',
             'body' => 'Body content 2...',
         ]);
         News::create([

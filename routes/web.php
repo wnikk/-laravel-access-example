@@ -8,6 +8,7 @@ use App\Http\Controllers\Examples\Example3Controller;
 use App\Http\Controllers\Examples\Example4Controller;
 use App\Http\Controllers\Examples\Example5Controller;
 use App\Http\Controllers\Examples\Example6Controller;
+use App\Http\Controllers\Examples\Example7Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,5 @@ Route::apiResource('example5', Example5Controller::class)->parameters([
 ]);
 
 Route::any('/example6/{news}', [Example6Controller::class, 'update']);
+
+Route::get('/example7/{news}', [Example7Controller::class, 'index']);

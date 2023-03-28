@@ -49,10 +49,7 @@ class CreateRulesSeeder extends Seeder
         AccessRules::newRule('example6.update.self', 'Rule that allows edit only where user is author');
 
         // example #7 - Policy
-        AccessRules::newRule('Example7News.create', 'Rule for one Model her event "create" example7');
-        AccessRules::newRule('Example7News.update', 'Rule for one Model her event "update" example7');
-        AccessRules::newRule('Example7News.delete', 'Rule for one Model her event "delete" example7');
-        AccessRules::newRule('Example7News.forceDelete', 'Rule for one Model her event "forceDelete" example7');
+        AccessRules::newRule('Example7News.test', 'Rule event "test" example7');
 
         // Final example, add control to the Access user interface
         $id = AccessRules::newRule('UserRules.index', 'View all rules, permits and inheritance');
