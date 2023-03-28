@@ -1,5 +1,5 @@
 
-## Examples for laravel articles
+## Examples of using Laravel ACR interface
 
 Achieving Access Control Rules in Laravel 10: Best Practices and Code Examples.
 Protect your application with advanced access control.
