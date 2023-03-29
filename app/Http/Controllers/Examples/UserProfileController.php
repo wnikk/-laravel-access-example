@@ -11,6 +11,8 @@ class UserProfileController extends Controller
 {
     public function edit()
     {
+        if (!Auth::check()) abort(403);
+
         $user = Auth::user();
         return view('user-profile', [
             'user'     => $user,
