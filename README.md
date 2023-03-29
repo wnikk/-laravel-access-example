@@ -8,7 +8,7 @@ Follow our step-by-step guide to implement GRUD functionality, access rules, and
 To implement RBAC using a package [Laravel Access Control Rules](https://github.com/wnikk/laravel-access-rules/).
 And FrontEnd is package [Laravel ACR Ui](https://github.com/wnikk/laravel-access-ui/).
 
-Full instruction is published on the resource [link will be soon].
+Full instruction, english version is published on the [dev.to resource](https://dev.to/wnikk/how-use-access-control-rules-and-grud-in-laravel-10-tutorial-step-by-step-307a).
 
 
 ## Like What You See? :thumbsup:
