@@ -83,8 +83,8 @@ trait GuardedController
         // Replace name for class App\Http\Controllers\Examples\Example1Controller
         // to guard prefix "Examples.Example1."
         $name = str_replace([
-            dirname(__TRAIT__, 2).DIRECTORY_SEPARATOR.'Controllers'.DIRECTORY_SEPARATOR,
-            DIRECTORY_SEPARATOR,
+            'App\\Http\\Controllers\\',
+            '\\',
             'Controller'
         ], [
             '', '.', '.'
