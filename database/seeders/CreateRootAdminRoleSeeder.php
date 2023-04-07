@@ -67,5 +67,7 @@ class CreateRootAdminRoleSeeder extends Seeder
         $acr->addPermission('Examples.UserRules.permission');
         $acr->addPermission('Examples.UserRules.permission', 'index');
         $acr->addPermission('Examples.UserRules.permission', 'update');
+
+        $acr->clearAllCachedPermissions();
     }
 }

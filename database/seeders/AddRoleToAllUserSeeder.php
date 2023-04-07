@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Wnikk\LaravelAccessRules\AccessRules;
 
 class AddRoleToAllUserSeeder extends Seeder
 {
@@ -24,5 +25,8 @@ class AddRoleToAllUserSeeder extends Seeder
         // or
         // $mainUser = User::find(1);
         // foreach ($all as $one) $one->inheritPermissionFrom($mainUser);
+
+        $acr = new AccessRules;
+        $acr->clearAllCachedPermissions();
     }
 }
