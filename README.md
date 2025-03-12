@@ -1,7 +1,7 @@
 
 ## Examples of using Laravel ACR interface
 
-Achieving Access Control Rules in Laravel 10: Best Practices and Code Examples.
+Achieving Access Control Rules in Laravel 12: Best Practices and Code Examples.
 Protect your application with advanced access control.
 Follow our step-by-step guide to implement GRUD functionality, access rules, and user roles.
 
