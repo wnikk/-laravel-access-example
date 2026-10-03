@@ -30,5 +30,8 @@ class NewsTableSeeder extends Seeder
             'name' => 'News of test user',
             'body' => 'Body content 3...',
         ]);
+
+        // Older than the 48 hours of example 7, so one record falls out of its condition
+        News::where('name', 'Second news')->update(['created_at' => now()->subDays(5)]);
     }
 }

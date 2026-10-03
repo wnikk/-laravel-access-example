@@ -11,12 +11,14 @@ class AuthController extends Controller
     public function auth(User $user)
     {
         Auth::login($user);
-        return "You are authorized as \"{$user->name}\" (ID: {$user->id})";
+
+        return redirect('/')->with('status', "You are authorized as \"{$user->name}\" (ID: {$user->id})");
     }
 
     public function logout()
     {
         Auth::logout();
-        return "Your authorization is closed";
+
+        return redirect('/')->with('status', 'Your authorization is closed');
     }
 }

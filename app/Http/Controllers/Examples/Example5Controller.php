@@ -18,7 +18,7 @@ class Example5Controller extends Controller
      */
     public function __construct()
     {
-        $this->authorizeResource(News::class, 'News');
+        $this->authorizeResource(News::class, 'news');
     }
 
     /**
@@ -26,7 +26,7 @@ class Example5Controller extends Controller
      */
     public function index()
     {
-        Response::json(News::all());
+        return Response::json(News::all());
     }
 
     /**
@@ -54,7 +54,7 @@ class Example5Controller extends Controller
     {
         $news->fill($request->toArray());
 
-        return Response::json($news->save);
+        return Response::json($news->save());
     }
 
     /**

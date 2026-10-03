@@ -15,7 +15,7 @@ class Example4Controller extends Controller
      */
     public function __construct()
     {
-        $this->authorizeResource(News::class, 'News');
+        $this->authorizeResource(News::class, 'news');
     }
 
     /**
@@ -51,7 +51,7 @@ class Example4Controller extends Controller
     {
         $news->fill($request->toArray());
 
-        return Response::json($news->save);
+        return Response::json($news->save());
     }
 
     /**

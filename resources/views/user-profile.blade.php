@@ -1,65 +1,43 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{{--
+    A host page that already shows somebody, plus the assignment card.
 
-    <title>{{ 'User #'.$user->id.' '.$user->name }}</title>
+    This is the whole integration for the widget: one directive. It is
+    duck-typed on getOwner(), which comes from the HasPermissions trait that
+    access-rules asks you to put on the model, so the package needs to know
+    nothing about App\Models\User. The owner row is created on demand — a user
+    has none until something is granted to them.
 
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    The card renders nothing at all when accessUi.routes are switched off or the
+    inherit screen is disabled, so this page stays valid either way.
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    The counts it shows are worth reading together: "nothing assigned" with a
+    non-zero effective total means somebody granted this account something
+    directly, which a list of roles would never reveal.
+--}}
+@extends('layouts.admin')
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu:regular,bold"/>
-    <style>
-        body {font-family: Ubuntu, roman, serif;}
-    </style>
+@section('content')
 
-    @include('accessUi::links')
+    <h1>{{ $user->name }}</h1>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function(e)
-        {
-            accessUi.init(document.getElementById('container-inherit'), 'inherit',{
-                csrfToken: document.querySelector('meta[name="csrf-token"]')?.content,
-                routeInherit: {
-                    list:   '{{ route('userRoles.inherit', ['index', $owner_id]) }}',
-                    create: '{{ route('userRoles.inherit', ['store', $owner_id]) }}',
-                    delete: '{{ route('userRoles.inherit', ['destroy', $owner_id, ':id:']) }}',
-                },
-            });
-            accessUi.init(document.getElementById('container-permission'), 'permission',{
-                csrfToken: document.querySelector('meta[name="csrf-token"]')?.content,
-                routePermission: {
-                    list:   '{{ route('userRoles.permission', ['index', $owner_id]) }}',
-                    update: '{{ route('userRoles.permission', ['update', $owner_id, ':id:']) }}',
-                },
-            });
-        });
-    </script>
+    <dl>
+        <dt>ID</dt>
+        <dd>{{ $user->getKey() }}</dd>
 
-</head>
-<body>
+        <dt>Email</dt>
+        <dd>{{ $user->email }}</dd>
 
-    <div class="container">
+        <dt>Access-rules owner id</dt>
+        <dd>{{ $owner_id }}</dd>
+    </dl>
 
-        <h1>{{ $user->name }} (ID: {{ $user->id }})</h1>
-        <p>
-            <label>email:</label>
-            <strong>{{ $user->email }}</strong>
-        </p>
+    {{-- The card of wnikk/laravel-access-ui. It renders nothing while the routes of the panel are off. --}}
+    @accessUiWidget(['owner' => $user, 'title' => __('Access for this account')])
 
-        <div>
+    <p style="margin-top:2rem;opacity:.7">
+        <a href="{{ url('/users') }}">All users</a>
+        · <a href="{{ url('/sign-in/'.$user->getKey()) }}">sign in as {{ $user->name }}</a>
+        · <a href="{{ url('/example8') }}">then open example 8</a> to see what the card granted.
+    </p>
 
-            <h4 class="mt-3">inherit</h4>
-            <div id="container-inherit"></div>
-
-            <h4 class="mt-3">permission</h4>
-            <div id="container-permission"></div>
-
-        </div>
-    </div>
-
-</body>
-</html>
+@endsection

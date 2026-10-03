@@ -10,36 +10,36 @@ use Illuminate\Support\Str;
 class CreateUserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Ann and Bob are the two users of the ABAC tutorial: the department and the approval
+     * limit are attributes that conditions read as "user.department_id" and "user.approval_limit".
+     * Users 3-5 hold nothing, so a refusal is always one sign-in away.
      */
     public function run(): void
     {
         DB::table('users')->insert([
             'id' => 1,
-            'name' => 'Test user 1',
+            'name' => 'Ann',
             'email' => 'root@mail.com',
             'password' => Hash::make('12345'),
+            'department_id' => 1,
+            'approval_limit' => 500,
         ]);
         DB::table('users')->insert([
             'id' => 2,
-            'name' => 'Test user 2',
+            'name' => 'Bob',
             'email' => 'test@mail.com',
             'password' => Hash::make('password'),
+            'department_id' => 2,
+            'approval_limit' => 100,
         ]);
-        DB::table('users')->insert([
-            'name' => 'Test user 3',
-            'email' => Str::random(10).'@mail.com',
-            'password' => Hash::make(Str::random(10)),
-        ]);
-        DB::table('users')->insert([
-            'name' => 'Test user 4',
-            'email' => Str::random(10).'@mail.com',
-            'password' => Hash::make(Str::random(10)),
-        ]);
-        DB::table('users')->insert([
-            'name' => 'Test user 5',
-            'email' => Str::random(10).'@mail.com',
-            'password' => Hash::make(Str::random(10)),
-        ]);
+
+        foreach ([3, 4, 5] as $id) {
+            DB::table('users')->insert([
+                'id' => $id,
+                'name' => 'Test user '.$id,
+                'email' => Str::random(10).'@mail.com',
+                'password' => Hash::make(Str::random(10)),
+            ]);
+        }
     }
 }

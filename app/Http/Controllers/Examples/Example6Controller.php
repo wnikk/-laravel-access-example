@@ -15,6 +15,6 @@ class Example6Controller extends Controller
 
         $news->fill($request->toArray());
 
-        return Response::json($news->save?1:0);
+        return Response::json($news->save() ? 1 : 0);
     }
 }
